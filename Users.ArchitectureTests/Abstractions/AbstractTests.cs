@@ -1,4 +1,5 @@
 using System.Reflection;
+using SharedKernel.Abstractions;
 using Users.Application;
 using Users.Domain.Models;
 
@@ -10,4 +11,5 @@ public abstract class AbstractTests
     protected static readonly Assembly DomainAssembly = typeof(User).Assembly;
     protected static readonly Assembly InfrastructureAssembly = typeof(Infrastructure.DependencyInjection).Assembly;
     protected static readonly Assembly PresentationAssembly = typeof(Presentation.DependencyInjection).Assembly;
+    protected static readonly Assembly SharedKernelAssembly = typeof(Entity<>).Assembly;
 }
